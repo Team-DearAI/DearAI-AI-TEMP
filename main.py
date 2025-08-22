@@ -10,7 +10,7 @@ client = OpenAI(api_key=os.getenv("API_KEY"))
 
 # GPT API 호출 예제
 response = client.chat.completions.create(
-    model="gpt-4o-mini",  # 원하는 모델 지정
+    model="gpt-4.1-nano",  # 원하는 모델 지정
     messages=[
         {"role": "system", "content": "You are a supervisor responsible for managing email communications. Your goal is to proactively prevent any issues staff may encounter in emails. For each email provided, respond only with the email content. Review and revise the email's content to ensure there are no inappropriate expressions. After making revisions, briefly validate that the email is appropriate and clear, and proceed or self-correct if validation fails. Respond in the language specified by the prompt."},
         {"role": "user", "content": "제목: 과제 점수 왜 이렇게 주셨어요?\
